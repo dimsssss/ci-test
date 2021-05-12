@@ -19,6 +19,7 @@ jobs:
             apt-get update -y && apt-get upgrade -y
       - run:
             apt-get install npm -y
+      - run:
             npm -v
       - run: 
             ls -al
