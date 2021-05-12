@@ -17,7 +17,10 @@ jobs:
       - checkout
 
       - run:
-          command: npm run test
+          command: sudo apt-get update -y
+          command: sudo apt-get upgrade -y
+          command: sudo apt-get install npm -y
+          command: npm -v
 
 
 workflows:
