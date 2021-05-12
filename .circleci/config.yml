@@ -1,4 +1,6 @@
-version: 2
+version: 2.1
+orbs:
+  node: circleci/node@4.3.0
 jobs:
   build_and_test:
     docker:
@@ -6,7 +8,6 @@ jobs:
         auth:
           username: mydockerhub-user
           password: $DOCKERHUB_PASSWORD  # context / project UI env-var reference
-      - image: cimg/node:14.17.0
 
     environment:
       TEST_REPORTS: /tmp/test-reports
@@ -23,6 +24,8 @@ jobs:
             npm -v
       - run: 
             ls -al
+      - run:
+            npm install n
       - run:
             npm install
       - run:
