@@ -20,10 +20,11 @@ jobs:
       - run:
             apt-get install npm -y
             npm -v
-      - run:
-            pwd
+      - run: 
+            ll
       - run:
             npm install
+      - run:
             npm run test
             
 
