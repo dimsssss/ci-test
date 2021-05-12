@@ -10,7 +10,7 @@ jobs:
       - run: npm run test
 workflows:
   version: 2
-    cistart:
+  build_and_test:
     jobs:
       - build
       - test
