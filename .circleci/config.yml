@@ -6,7 +6,7 @@ jobs:
         auth:
           username: mydockerhub-user
           password: $DOCKERHUB_PASSWORD  # context / project UI env-var reference
-      - image: circleci/node:14.17.0
+      - image: cimg/node:14.17.0
 
     environment:
       TEST_REPORTS: /tmp/test-reports
