@@ -17,10 +17,11 @@ jobs:
       - checkout
 
       - run:
-          command: sudo apt-get update -y
-          command: sudo apt-get upgrade -y
-          command: sudo apt-get install npm -y
-          command: npm -v
+          command:  |
+            sudo apt-get update -y
+            sudo apt-get upgrade -y
+            sudo apt-get install npm -y
+            npm -v
 
 
 workflows:
