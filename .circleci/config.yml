@@ -20,7 +20,7 @@ jobs:
       - run:
             apt-get update -y && apt-get upgrade -y
       - run:
-            apt-get install npm -y
+            apt-get install curl -y
       - node/install:
           install-yarn: true
       - run: node --version
