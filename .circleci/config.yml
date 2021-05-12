@@ -14,15 +14,18 @@ jobs:
     working_directory: ~/ci-test
 
     steps:
-      - checkout
-
       - run:
           command:  |
             apt-get update -y
             apt-get upgrade -y
             apt-get install npm -y
             npm -v
-
+  test:
+    steps:
+      - run:
+          - checkout
+          command:
+            npm run test
 
 workflows:
   version: 2
