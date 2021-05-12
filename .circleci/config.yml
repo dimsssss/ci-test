@@ -8,8 +8,6 @@ jobs:
         auth:
           username: mydockerhub-user
           password: $DOCKERHUB_PASSWORD  # context / project UI env-var reference
-      - image: 'cimg/base:stable'
-
     environment:
       TEST_REPORTS: /tmp/test-reports
 
@@ -28,8 +26,6 @@ jobs:
             npm -v
       - run: 
             ls -al
-      - run:
-            npm install n
       - run:
             npm install
       - run:
