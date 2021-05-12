@@ -16,11 +16,13 @@ jobs:
     steps:
       - checkout
       - run:
-          command:  |
-            apt-get update -y
-            apt-get upgrade -y
+            apt-get update -y && apt-get upgrade -y
+      - run:
             apt-get install npm -y
             npm -v
+      - run:
+            pwd
+      - run:
             npm install
             npm run test
             
