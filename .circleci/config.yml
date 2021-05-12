@@ -21,6 +21,7 @@ jobs:
             apt-get upgrade -y
             apt-get install npm -y
             npm -v
+            npm install
             npm run test
             
 
