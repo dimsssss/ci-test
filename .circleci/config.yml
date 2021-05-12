@@ -2,6 +2,8 @@
 version: 2
 jobs: 
   build:
+    docker: 
+      image: ubuntu:18.04
     steps:
       - checkout # this pulls code down from GitHub
       - run: npm install
