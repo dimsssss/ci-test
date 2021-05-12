@@ -6,7 +6,7 @@ jobs:
         auth:
           username: mydockerhub-user
           password: $DOCKERHUB_PASSWORD  # context / project UI env-var reference
-      - image: nodejs:latest
+      - image: node:latest
 
     environment:
       TEST_REPORTS: /tmp/test-reports
