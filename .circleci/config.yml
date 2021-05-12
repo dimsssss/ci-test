@@ -21,7 +21,7 @@ jobs:
             apt-get install npm -y
             npm -v
       - run: 
-            ll
+            ls -al
       - run:
             npm install
       - run:
