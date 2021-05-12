@@ -1,6 +1,6 @@
 version: 2
 jobs:
-  build:
+  build_and_test:
     docker:
       - image: ubuntu:18.04
         auth:
@@ -20,17 +20,12 @@ jobs:
             apt-get upgrade -y
             apt-get install npm -y
             npm -v
-  test:
-    steps:
-      - run:
-          - checkout
-          command:
+            checkout
             npm run test
+            
 
 workflows:
   version: 2
   build-deploy:
     jobs:
-      - build
-      - test
-
+      - build_and_test
